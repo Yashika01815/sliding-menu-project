@@ -1,0 +1,122 @@
+*{
+  padding:0;
+  margin:0;
+  /* copying from google font */
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+.main-box{
+  background-image: url("final.jpg");
+/* the image is only present in half of the page so use height 100vh */
+height:100vh;
+background-size: cover;
+}
+.btn-one{
+  color:rgb(64, 56, 56);
+  font-size: 30px;
+  font-weight:700;
+  position:absolute;
+  left:13px;
+  top:7px;
+}
+.slide-menu{
+  position:fixed;
+   left:-300px;
+  height:100vh;
+  width:300px;
+  background-color:#D3AD2C;
+  opacity:0.8;
+  box-shadow:0 0 10px rgba(44, 130, 201,0.3); 
+  transition:all 0.4s linear;
+
+}
+.slide-menu .logo{
+  width:100%;
+  line-height:60px;
+  position:absolute;
+  height:60px;
+  box-shadow:0 0 4px rgba(44, 130, 201,0.3);
+}
+.slide-menu .logo a{
+  /* word ko left me karna ho to position absolute and left */
+  position: absolute;
+  left:44px;
+  top:2px;
+  text-decoration: none;
+  color:rgb(16, 15, 15);
+font-size:20px;
+font-weight:600;
+/* background-color: rgb(16, 133, 162); */
+}
+.slide-menu .btn-two i{
+  color:grey;
+  font-size: 20px;
+  font-weight:700;
+position:absolute;
+left:275px;
+cursor:pointer;
+
+}
+.slide-menu .menu{
+  position:absolute;
+  width:100%;
+  top:80px;
+  color:black;
+  text-decoration: none;
+}
+.slide-menu .menu li{
+  /* distance between 2 elements is margin */
+  margin-top:5px;
+  /* distance of elements from box */
+  /* padding:top bottom 10 pxand right left 20px; */
+  padding:10px 20px;
+}
+.slide-menu .menu i,a{
+  color:rgb(16, 15, 15);
+  font-size:18px;
+  text-decoration: none;
+}
+.slide-menu .menu i{
+  padding-right:4px;
+}
+.slide-menu .social-media {
+  color:black;
+  opacity:0.5;
+  position:absolute;
+  left:35%;
+  bottom:30px;
+}
+.slide-menu .social-media i{
+  margin-right:6px;
+  
+}
+#check{
+  display:none;
+}
+.slide-menu .menu li:hover{
+
+
+box-shadow:0 0 10px rgba(44, 130, 201,0.3);
+}
+.slide-menu .btn-two i:hover{
+  font-size:24px;
+}
+.main-box .btn-one i:hover{
+  font-size:35px;
+}
+.slide-menu .social-media i:hover{
+opacity:1;
+font-size:20px;
+}
+/* now worlking on checkbox */
+/* on clicking check box or button one and the slidebar shows because it will not be shown in first */
+/* ~shows siblings like checkbox has a sibling as btn one  slidemenu */
+/* jese hi checkbox check ho slidebar menu me change aajae */
+#check:checked ~.slide-menu{
+  left:0;
+}
+#check:checked ~.btn-one{
+  opacity:0;
+}
